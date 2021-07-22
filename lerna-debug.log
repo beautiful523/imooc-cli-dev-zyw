@@ -1,10 +1,45 @@
-15 error Error: Command failed with exit code 1: git remote update
-15 error fatal: unable to access 'https://github.com/beautiful523/imooc-cli-dev-zyw.git/': Failed to connect to github.com port 443: Operation timed out
-15 error error: Could not fetch origin
-15 error Fetching origin
-15 error     at makeError (/Users/zhouyawen/architect_course/imooc-cli-dev-zyw/node_modules/_execa@5.1.1@execa/lib/error.js:60:11)
-15 error     at Function.module.exports.sync (/Users/zhouyawen/architect_course/imooc-cli-dev-zyw/node_modules/_execa@5.1.1@execa/index.js:194:17)
-15 error     at Object.execSync (/Users/zhouyawen/architect_course/imooc-cli-dev-zyw/node_modules/_@lerna_child-process@4.0.0@@lerna/child-process/index.js:39:16)
-15 error     at updateRemote (/Users/zhouyawen/architect_course/imooc-cli-dev-zyw/node_modules/_@lerna_version@4.0.0@@lerna/version/lib/is-behind-upstream.js:34:16)
-15 error     at isBehindUpstream (/Users/zhouyawen/architect_course/imooc-cli-dev-zyw/node_modules/_@lerna_version@4.0.0@@lerna/version/lib/is-behind-upstream.js:16:3)
-15 error     at VersionCommand.initialize (/Users/zhouyawen/architect_course/imooc-cli-dev-zyw/node_modules/_@lerna_version@4.0.0@@lerna/version/index.js:153:9)
+0 silly argv { _: [ 'version' ], lernaVersion: '4.0.0', '$0': 'lerna' }
+1 notice cli v4.0.0
+2 verbose rootPath /Users/zhouyawen/architect_course/imooc-cli-dev-zyw
+3 info current version 0.0.1
+4 silly isAnythingCommitted
+5 verbose isAnythingCommitted 1
+6 silly getCurrentBranch
+7 verbose currentBranch master
+8 silly remoteBranchExists
+9 silly isBehindUpstream
+10 silly isBehindUpstream master is behind origin/master by 0 commit(s) and ahead by 0
+11 silly hasTags
+12 verbose hasTags true
+13 silly git-describe.sync "v0.0.1-1-gc2c2732" => {"lastTagName":"v0.0.1","lastVersion":"v0.0.1","refCount":"1","sha":"c2c2732","isDirty":false}
+14 info Looking for changed packages since v0.0.1
+15 silly checking diff packages/core
+16 silly found diff in packages/core/README.md
+16 silly found diff in packages/core/__tests__/core.test.js
+16 silly found diff in packages/core/lib/core.js
+17 verbose filtered diff [
+17 verbose filtered diff   'packages/core/README.md',
+17 verbose filtered diff   'packages/core/__tests__/core.test.js',
+17 verbose filtered diff   'packages/core/lib/core.js'
+17 verbose filtered diff ]
+18 verbose updated @imooc-cli-dev-zyw/core
+19 verbose git-describe undefined => "v0.0.1-1-gc2c2732"
+20 silly git-describe parsed => {"lastTagName":"v0.0.1","lastVersion":"v0.0.1","refCount":"1","sha":"c2c2732","isDirty":false}
+21 info execute Skipping releases
+22 silly lifecycle No script for "preversion" in "imooc-cli-dev-zyw", continuing
+23 silly lifecycle No script for "preversion" in "@imooc-cli-dev-zyw/core", continuing
+24 silly lifecycle No script for "version" in "@imooc-cli-dev-zyw/core", continuing
+25 silly lifecycle No script for "version" in "imooc-cli-dev-zyw", continuing
+26 silly gitAdd [ 'packages/core/package.json', 'lerna.json' ]
+27 silly gitCommit v0.0.2
+28 verbose git [ 'commit', '-m', 'v0.0.2' ]
+29 silly gitTag v0.0.2
+30 verbose git [ 'tag', 'v0.0.2', '-m', 'v0.0.2' ]
+31 silly lifecycle No script for "postversion" in "@imooc-cli-dev-zyw/core", continuing
+32 silly lifecycle No script for "postversion" in "imooc-cli-dev-zyw", continuing
+33 info git Pushing tags...
+34 silly gitPush origin master
+35 error Error: Command failed with exit code 128: git push --follow-tags --no-verify --atomic origin master
+35 error fatal: unable to access 'https://github.com/beautiful523/imooc-cli-dev-zyw.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
+35 error     at makeError (/Users/zhouyawen/architect_course/imooc-cli-dev-zyw/node_modules/_execa@5.1.1@execa/lib/error.js:60:11)
+35 error     at handlePromise (/Users/zhouyawen/architect_course/imooc-cli-dev-zyw/node_modules/_execa@5.1.1@execa/index.js:118:26)
